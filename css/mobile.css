@@ -6,7 +6,10 @@ section .main_btn{
 section .main .men_text h1 span{
     font-size: 30px;
 }
+input:disabled {
 
+    background-color: transparent;
+}
 section .main .men_text h1{
     font-size: 30px;
     line-height: 4rem;
