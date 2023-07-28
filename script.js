@@ -5,6 +5,8 @@ Para adicionar um novo item:
 - e terá que ser adicionado um let com o id que foi colocado nos inputs, seguindo o modelo abaixo:
        */
 
+// Smooth Scrolling
+// Smooth Scrolling
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 let valorTotal = document.getElementById("valorTotal");
 
@@ -114,7 +116,9 @@ function displayVoltar() { // Botão voltar
     let displayCarrinho = document.getElementById("displayCarrinho");
     let seta = document.getElementById("seta")
     let carrinho = document.getElementById("carrinho")
+    let limpei = document.getElementById("limpei"); 
 
+    limpei.style.display = "none";
     displayCarrinho.style.display = "none"
     displayCompras.style.display = "inline";
     seta.style.display = "none";
