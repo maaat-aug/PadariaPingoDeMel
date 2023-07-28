@@ -95,11 +95,20 @@ section .main{
     background-size: cover;
     background-position: center;
 }
+#informationButton {
+    font-size: 30px;
+}
 .botao {
     margin-top: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.botao button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 section .main .men_text h1{
     font-size: 60px;
@@ -133,6 +142,7 @@ section .main_btn{
     width: 200px;
     cursor: pointer;
     padding: 12px 25px;
+    margin-bottom: 15px;
 }
 
 section .main_btn a{
@@ -567,7 +577,7 @@ footer{
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     width: 40%;
     display: block;
-    text-align: center;
+     text-align: center;
 }
 .a2 h1 {
     font-family: mv boli, 'REM', sans-serif !important;
@@ -606,4 +616,50 @@ footer{
 body::-webkit-scrollbar {
     display: none;}
 
+.informa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
 
+.informaText {
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.botaoInforma2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.informatext2 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.informatext2 button {
+    margin-top: 1.5rem;
+    width: 50px;
+    height: 40px;
+    border-radius: 35px;
+    color: rgb(250, 106, 106);
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.informatext2 button:hover {
+    color: red;
+}

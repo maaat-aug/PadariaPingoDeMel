@@ -105,6 +105,9 @@ function trocarDisplay() { // Botão continuar
     let displayCarrinho = document.getElementById("displayCarrinho");
     let seta = document.getElementById("seta")
     let carrinho = document.getElementById("carrinho")
+    let information1 = document.getElementById("information1")
+
+    information1.style.display = "none"
     displayCarrinho.style.display = "inline"
     displayCompras.style.display = "none";
     seta.style.display = "inline";
@@ -120,7 +123,9 @@ function displayVoltar() { // Botão voltar
     let seta = document.getElementById("seta")
     let carrinho = document.getElementById("carrinho")
     let limpei = document.getElementById("limpei"); 
+    let information1 = document.getElementById("information1")
 
+    information1.style.display = "none"
     limpei.style.display = "none";
     displayCarrinho.style.display = "none"
     displayCompras.style.display = "inline";
@@ -128,9 +133,19 @@ function displayVoltar() { // Botão voltar
     carrinho.style.display = "inline";
     carrinhoVerificar();
     preçoUnidade();
-
 }
 
+function information1() {
+    let displayCompras = document.getElementById("displayCompras");
+    let displayCarrinho = document.getElementById("displayCarrinho");
+    let limpei = document.getElementById("limpei"); 
+    let information1 = document.getElementById("information1")
+
+    limpei.style.display = "none";
+    displayCarrinho.style.display = "none"
+    information1.style.display = "Inherit"
+    displayCompras.style.display = "none";
+}
 function carrinhoRemover(tipo) {
     carrinho = carrinho.filter(item => item !== tipo); // Filtra o array para manter apenas os itens que não são do tipo especificado
     salvarCarrinhoNoLocalStorage(); // Salva o carrinho atualizado no Local Storage

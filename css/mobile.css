@@ -185,6 +185,7 @@ section nav .icon i{
 
 .a2  {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border: 1px solid black;
     height: 38%;
     width: 98%;
     display: block;
@@ -216,4 +217,46 @@ section nav .icon i{
 
 .a3 .N:hover {
     background-color: rgb(250, 45, 45);
+}
+
+.informa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.informaText {
+    width: 90%;
+    height: 50%;
+    font-size: 15px;
+}
+
+.botaoInforma2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.informatext2 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.informatext2 button {
+    margin-top:1.5rem;
+    width: 25px;
+    height: 20px;
+    border-radius: 35px;
+    color: rgb(250, 106, 106);
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.informatext2 button:hover {
+    color: red;
 }
