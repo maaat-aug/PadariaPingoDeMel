@@ -565,10 +565,9 @@ footer{
 
 .a2  {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    border: 1px solid black;
     width: 40%;
     display: block;
-     text-align: center;
+    text-align: center;
 }
 .a2 h1 {
     font-family: mv boli, 'REM', sans-serif !important;
