@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaria Pingo de Mel</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="css/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -63,13 +63,13 @@
                 <p>
                     Seja bem-vindo à nossa padaria repleta de encantos! Delicie-se com a irresistível variedade de pães fresquinhos, cada um com um sabor que conquista corações.
                 </p>
-                <div class="botao">
+                <div class="botao2">
                     <div class="main_btn">
                         <a href="#Menu">Nossos produtos</a>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                     <button onclick="information1()">
-                        <i id="informationButton" class="fa-solid fa-circle-info"></i>
+                        <i id="informationButton" class="fa-regular fa-circle-question"></i>
                     </button>
                 </div> 
             </div>    <!-- class textos termina aqui -->
@@ -278,15 +278,16 @@
 <div id="displayCarrinho" style="display: none;">  
     <div class="carrinhoBack"> 
 
-        <div class="logoCarrinho">  
+        <div class="logoCarrinho">
             <button onclick="confirmarLimpar()">
             <img src="image/carrinho-icon.png" alt="">
             </button>
-        </div> 
+            <div class="botaoInformationCarrinho">
+            </div>
 
+        </div>
         <div class="produtosVenda">
             <div class="carrinhosElementos">
-
             <div class="elementos1" id="paoElemento" style="display: inherit;">
                 <div class="Unidade">
                 <img src="./image/pão.jpg" alt="">
@@ -373,7 +374,29 @@
 
 
 
-            </div>   
+            </div> 
+            
+                    <div class="emptyMiddleSpace">
+                    a <!-- espaço branco no meio do displayCarrinho-->
+                    </div>
+
+        <div class="finalizarPrimario">
+                    <div class="finalizarCompra">
+                            <div class="ConfirmarCompra">
+                        <h1 id="confirmar1">Resumo:</h1>
+                            </div>
+                    <div class="confirmarConteudo">
+                        <div class="valorTotalBox">
+                    <p id="valorTotalCarrinho">Total Total: R$0,00</p>
+                    </div>
+                    </div>
+                            <div class="confirmarBottomBox">
+                                <div class="confirmarBottom">
+                                    <button><i class="fa-solid fa-cart-shopping"></i> Finalizar Pedido</button>
+                                </div>
+                            </div>
+                    </div>
+                </div> <!-- aa-->                    
         </div>  
     </div> 
 </div>

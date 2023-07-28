@@ -1,8 +1,8 @@
 *{
+    font-family:'REM', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui;
     scrollbar-width: none; /* Para navegadores Firefox */
   -ms-overflow-style: none; /* Para navegadores Internet Explorer e Edge */
 }
@@ -97,15 +97,29 @@ section .main{
 }
 #informationButton {
     font-size: 30px;
+    border-radius: 50%;
+}
+#informationButton:hover {
+color: #fac031;
+transition: 0.4s;
+
 }
 .botao {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao2 {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.botao button {
+.botao2 button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -132,7 +146,7 @@ section p{
     left: 20px;
     bottom: 120px;
     line-height: 22px;
-    font-family: system-ui;
+    font-family: 'REM', sans-serif;
     font-weight: 500;
 }
 
@@ -285,7 +299,7 @@ section .main_btn:hover i{
     text-align: center;
     margin-top: 8px;
     line-height: 21px;
-    border: 1px solid red;
+
 
 }
 
@@ -476,6 +490,7 @@ section .main_btn:hover i{
     transition: 0.3s linear;
     margin-top: 1rem;
 }
+
 .produtosVenda {
     width: 100%;
     display: flex;
@@ -484,9 +499,18 @@ section .main_btn:hover i{
 
 .carrinhosElementos {
     width: 33%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 20rem;
+}
+
+
+.botaoInformationCarrinho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 .carrinhosElementos img {
     width: 130px;
@@ -510,9 +534,26 @@ section .main_btn:hover i{
     padding: 30px;
     border-radius: 35px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    margin-top: 20px;
     display: flex;
+    background-color: white;
+    margin-bottom: 20px;
     align-items: center;
+    position:static;
+}
+
+.elementos2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -31px;
+}
+
+.elementos2 button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+
 }
 .Unidade input{
     display: flex;
@@ -546,6 +587,83 @@ border-radius: 50%;
     flex-direction: row-reverse;
     width: 70%;
 }
+
+.finalizarPrimario {
+    margin-top: 7.9rem;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+.finalizarCompra {
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ConfirmarCompra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#confirmar1 {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: 'REM', sans-serif;
+}
+.confirmarConteudo {
+    height: 90%;
+}
+.confirmarBottomBox {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmarBottom button {
+    height: 40px;
+    width: 300px;
+    font-family: 'REM';
+    border-radius: 35px;
+    font-size: 25px;
+    color: white;
+    background-color: limegreen;
+    margin-bottom: 20px;
+}
+
+.confirmarBottom button:hover {
+    background-color: rgb(72, 169, 72);
+}
+
+.confirmarConteudo {
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    font-family: 'REM';
+}
+
+.valorTotalBox {
+    background-color: white;
+    height: 20%;
+    margin-left: 0;
+    width: 100%;
+}
+/* espaço do meio que está fazendo na div displayCarrinho */
+.emptyMiddleSpace { 
+    justify-content: right;
+    display: flex;
+    height: 100vh;
+    width: 34%;
+    }
 /*Footer*/
 
 footer{
@@ -622,44 +740,56 @@ body::-webkit-scrollbar {
     align-items: center;
     width: 100%;
     height: 100vh;
+    background-image: url(../image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .informaText {
+    background-color: white;
     display: flex;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     width: 50%;
     height: 50%;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
 }
-
-.botaoInforma2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+.informaText p {
+    width: 60%;
+    text-align: center;
+    font-family: mv boli ;
 }
-
+.botaoInforma2 {
+    color: #fac031;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 .informatext2 {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+  
 }
 
 .informatext2 button {
+    cursor: pointer;
     margin-top: 1.5rem;
     width: 50px;
     height: 40px;
     border-radius: 35px;
-    color: rgb(250, 106, 106);
-    font-size: 25px;
+    color: black;
+    font-size: 40px;
     background-color: transparent;
     border: none;
 }
 
 .informatext2 button:hover {
-    color: red;
+    color: crimson;
+    transform: 0.5s;
 }

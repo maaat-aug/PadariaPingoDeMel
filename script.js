@@ -9,6 +9,7 @@ Para adicionar um novo item:
 // Smooth Scrolling
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 let valorTotal = document.getElementById("valorTotal");
+let valorTotal2 = document.getElementById("valorTotalCarrinho");
 
 
 // Produtos 
@@ -97,6 +98,7 @@ function preço() { // Aqui é salvo o preço dos produtos
         } 
     });
     valorTotal.textContent = "R$" + valor.toFixed(2).replace(".", ","); // imprimindo o valor total
+    valorTotal2.textContent = " Valor Total: R$" + valor.toFixed(2).replace(".", ","); // imprimindo o valor total
 }
 
 function trocarDisplay() { // Botão continuar
