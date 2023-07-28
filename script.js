@@ -31,6 +31,7 @@ let qntRosquinhaCoco2 = document.getElementById("qntRosquinhaCoco2");
 function adicionar(item) { // Adiciona Itens ao carrinho (que está em forma de array)
     carrinho.push(item);
     preço(); // cade vez que um item for add, o preço total atualiza
+    preçoUnidade(); // cade vez que um item for add, o preço individual atualiza
     contarItems(item); // usa o .filter no array Carrinho pra calcular a quantidade do mesmo item que está presente
     attQuantidade(); // atualiza os input de text com a quantidade itens atuais (os dados são obtidos através do contarItems)
     salvarCarrinhoNoLocalStorage(); // salvando no local storage
@@ -42,6 +43,7 @@ function remover(item) { // Remove Itens ao carrinho (que está em forma de arra
         carrinho.splice(index, 1); // Removendo o item desejado
         // Os itens a baixo executam a mesma função dos da function adicionar
         preço();
+        preçoUnidade();
         contarItems(item);
         salvarCarrinhoNoLocalStorage();
         attQuantidade();
@@ -133,6 +135,8 @@ function carrinhoRemover(tipo) {
     attQuantidade(); // Atualiza a lista de itens do carrinho no HTML
     carrinhoVerificar();
     preço();
+    preçoUnidade();
+
 }
 
 function carrinhoVerificar() {
@@ -207,7 +211,7 @@ function limparCarrinho() {
     
     limpei.style.display = "none";
     displayCarrinho.style.display = "inherit";
-    
+    preçoUnidade();
     preço();
     salvarCarrinhoNoLocalStorage();
     attQuantidade();
@@ -215,8 +219,24 @@ function limparCarrinho() {
 }
 
 
+function preçoUnidade() {
+    let precoPaoInput = document.getElementById("precoPao");
+    let precoPaoQueijoInput = document.getElementById("precoPaoQueijo");
+    let precoPaoMilhoInput = document.getElementById("precoPaoMilho")
+    let precoBoloCenouraInput = document.getElementById("precoBoloCenoura")
+    let precoDonutInput = document.getElementById("precoDonut")
+    let precoRoscaCocoInput = document.getElementById("precoRoscaCoco")
 
+    // Definindo o valor do input com o preço de cada item
+    precoPaoInput.value = "R$" + (contarItems("Pao") * 0.60).toFixed(2).replace(".", ",");
+    precoPaoQueijoInput.value = "R$" + (contarItems("PaoQueijo") * 0.70).toFixed(2).replace(".", ",");
+    precoPaoMilhoInput.value = "R$" + (contarItems("paoMilho") * 0.80).toFixed(2).replace(".", ",");
+    precoBoloCenouraInput.value = "R$" + (contarItems("boloCenoura") * 2.00).toFixed(2).replace(".", ",");
+    precoDonutInput.value = "R$" + (contarItems("donuts") * 5.00).toFixed(2).replace(".", ",");
+    precoRoscaCocoInput.value = "R$" + (contarItems("rosquinhaCoco") * 13.00).toFixed(2).replace(".", ",");
+
+}
 
 attQuantidade(); // atualizando a quantidade de itens no input ao carregar a pagina
 preço();  // atualizando o preço total ao carregar a pagina
-carrinhoVerificar();
+carrinhoVerificar()

@@ -430,7 +430,8 @@ section .main_btn:hover i{
     background-position: center;
     display: flex;
 }
- 
+
+
 .logoCarrinho img {
     width: 100px !important;
     height: 100px !important;
@@ -496,7 +497,15 @@ section .main_btn:hover i{
     display: flex;
     align-items: center;
 }
-
+.Unidade input{
+    display: flex;
+    width: 130px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
 .elementos1 button {
     padding: 20px;
     height: 20px;
