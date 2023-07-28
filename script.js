@@ -239,4 +239,5 @@ function preçoUnidade() {
 
 attQuantidade(); // atualizando a quantidade de itens no input ao carregar a pagina
 preço();  // atualizando o preço total ao carregar a pagina
+preço2(); // atualizando o preço individual de cada item
 carrinhoVerificar()
