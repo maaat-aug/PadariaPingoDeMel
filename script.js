@@ -110,6 +110,7 @@ function trocarDisplay() { // Botão continuar
     seta.style.display = "inline";
     carrinho.style.display = "none";
     carrinhoVerificar();
+    preçoUnidade();
     
 }
 
@@ -126,6 +127,7 @@ function displayVoltar() { // Botão voltar
     seta.style.display = "none";
     carrinho.style.display = "inline";
     carrinhoVerificar();
+    preçoUnidade();
 
 }
 
@@ -239,5 +241,5 @@ function preçoUnidade() {
 
 attQuantidade(); // atualizando a quantidade de itens no input ao carregar a pagina
 preço();  // atualizando o preço total ao carregar a pagina
-preço2(); // atualizando o preço individual de cada item
+preçoUnidade();  // atualizando o preço total ao carregar a pagina
 carrinhoVerificar()
