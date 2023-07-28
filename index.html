@@ -15,8 +15,8 @@
 <section style="height: 0vh;"><!-- NavBar aqui-->
     <nav>
         <div class="logo" >
-            <a href="#Home" >
-            <img  src="image/logo1.png">  
+            <a href="#Home" onclick="displayVoltar()">
+            <img src="image/logo1.png">  
             </a>
         </div>
 
@@ -46,209 +46,224 @@
             <i id="valorTotal"></i>
         </div>
     </nav>
-</section>  -->
+</section> 
 
 
 <div id="displayCompras" style="display: inline;">  <!-- Pagina principal inteira dentro dessa div-->
-<section id="Home">
- 
-        
+    <section id="Home">
+        <div class="main">
+            <div class="textos">
 
-    <div class="main">
+                <div class="men_text">
+                    <h1><span>O Pão quentinho</span><br>para as suas manhãs</h1>
+                </div>
 
-        <div class="textos">
-        <div class="men_text">
-            <h1><span>O Pão quentinho</span><br>para as suas manhãs</h1>
-        </div>
-    <br>
-    <br>
-    <p>
-        Seja bem-vindo à nossa padaria repleta de encantos! Delicie-se com a irresistível variedade de pães fresquinhos, cada um com um sabor que conquista corações.
-    </p>
-        <div class="botao">
-        <div class="main_btn">
-        <a href="#Menu">Nossos produtos</a>
-        <i class="fa-solid fa-angle-right"></i>
-        </div>
-    </div> 
-    </div>    <!-- class textos termina aqui -->
-    </div>    <!-- class main termina aqui -->         
+                <br>
+                <br>
+
+                <p>
+                    Seja bem-vindo à nossa padaria repleta de encantos! Delicie-se com a irresistível variedade de pães fresquinhos, cada um com um sabor que conquista corações.
+                </p>
+                <div class="botao">
+                    <div class="main_btn">
+                        <a href="#Menu">Nossos produtos</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div> 
+            </div>    <!-- class textos termina aqui -->
+        </div>    <!-- class main termina aqui -->         
     </section> <!-- section home termina aqui -->
-        <!--Menu-->
+
+
+
+<!--Menu-->
 <div class="menu" id="Menu">
-<h1><span>Menu</span></h1>  
-<div class="menu_box">  
+
+    <h1><span>Menu</span></h1>  
+
+    <div class="menu_box">  
         <div class="menu2">
-    <div class="menu_card"> <!--card do pão frances-->
+            <div class="menu_card"> <!--card do pão frances-->
+                
+                <div class="menu_image">
+                    <img src="image/pão.jpg">
+                </div>
+                
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
     
-                    <div class="menu_image">
-                        <img src="image/pão.jpg">
-                    </div>
-    
-                    <div class="small_card">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-    
-                    <div class="menu_info">
-                        <h2>Pão Francês</h2>
-                        <h3>R$0,60</h3>
-                        <br>
-                        <br>
-                        <div class="input">
+                <div class="menu_info">
+                    <h2>Pão Francês</h2>
+                    <h3>R$0,60</h3>
+
+                    <br>
+                    <br>
+
+                    <div class="input">
                         <input type="text" disabled id="quantidadePao">     
-                        </div>
-                        <div class="botao">
+                    </div>
+                    <div class="botao">
                         <button onclick="adicionar('Pao')" class="menu_btn">Adicionar</button> 
                         <button onclick="remover('Pao')" class="menu_btn">Remover</button>  
-                        </div>
-                        </div>
-     </div> 
-                
-    <div class="menu_card"> <!--card do pãoQueijo-->
-    
-                    <div class="menu_image">
-                        <img src="image/paoQueijo.jpg">
-                    </div>
-    
-                    <div class="small_card">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-    
-                    <div class="menu_info">
-                        <h2>Pão de Queijo</h2>
-                        <h3>R$0,70</h3>
-                        <br>
-                        <br>
-                        <div class="input">
-                        <input type="text" name="" disabled id="qntPaoQueijo" >        
-                        </div>
-                        <div class="botao">
-                        <button onclick="adicionar('PaoQueijo')" class="menu_btn">Adicionar</button>
-                        <button onclick="remover('PaoQueijo')" class="menu_btn">Remover</button>   
-                        </div>
-                        </div>
-    </div>
-    
-    <div class="menu_card"> <!--card do paoMilho-->
-    
-        <div class="menu_image">
-            <img src="image/paoHamburguer.jpg">
-        </div>
-    
-        <div class="small_card">
-            <i class="fa-solid fa-heart"></i>
-        </div>
-    
-        <div class="menu_info">
-            <h2>Pão de Milho</h2>
-            <h3>R$0,80</h3>
-            <br>
-            <br>
-            <div class="input">
-            <input type="text" name="" disabled id="qntPaoMilho" >        
-            </div>
-            <div class="botao">
-            <button onclick="adicionar('paoMilho')" class="menu_btn">Adicionar</button>
-            <button onclick="remover('paoMilho')" class="menu_btn">Remover</button>   
-            </div>
-            </div>
-    </div>
-    
-    <div class="menu_card"> <!--card do boloCenoura-->
-    
-        <div class="menu_image">
-            <img src="image/boloCenoura.jpg">
-        </div>
-    
-        <div class="small_card">
-            <i class="fa-solid fa-heart"></i>
-        </div>
-    
-        <div class="menu_info">
-            <h2>Bolo de Cenoura</h2>
-            <h3>R$2,00</h3>
-            <br>
-            <br>
-            <div class="input">
-            <input type="text" name="" disabled id="qntBoloCenoura" >        
-            </div>
-            <div class="botao">
-            <button onclick="adicionar('boloCenoura')" class="menu_btn">Adicionar</button>
-            <button onclick="remover('boloCenoura')" class="menu_btn">Remover</button>   
-            </div>
-            </div>
-    </div>
-    
-    <div class="menu_card"> <!--card do Donut-->
-    
-        <div class="menu_image">
-            <img src="image/donut.jpg">
-        </div>
-    
-        <div class="small_card">
-            <i class="fa-solid fa-heart"></i>
-        </div>
-    
-        <div class="menu_info">
-            <h2>Donuts</h2>
-            <h3>R$5,00</h3>
-            <br>
-            <br>
-            <div class="input">
-            <input type="text" name="" disabled id="qntDonuts" >        
-            </div>
-            <div class="botao">
-            <button onclick="adicionar('donuts')" class="menu_btn">Adicionar</button>
-            <button onclick="remover('donuts')" class="menu_btn">Remover</button>   
-            </div>
-            </div>
-    </div>
-    
-    <div class="menu_card"> <!--card do roscaCoco-->
-    
-        <div class="menu_image">
-            <img src="image/roscaCoco.jpg">
-        </div>
-    
-        <div class="small_card">
-            <i class="fa-solid fa-heart"></i>
-        </div>
-    
-        <div class="menu_info">
-            <h2>Rosquinha de Coco</h2>
-            <h3>R$13,00</h3>
-            <br>
-            <br>
-            <div class="input">
-            <input type="text" name="" disabled id="qntRosquinhaCoco" >        
-            </div>
-            <div class="botao">
-            <button onclick="adicionar('rosquinhaCoco')" class="menu_btn">Adicionar</button>
-            <button onclick="remover('rosquinhaCoco')" class="menu_btn">Remover</button>   
-            </div>
-            </div>
-    </div>
-    
-    
-    </div>
-</div>
-</div><!-- div menu termina aqui -->
-      <!--Contato-->
-<div class="contato" id="Contato">
-                <h1><span>Contato</span></h1>
-                <div class="contato_box">
-                    <div class="profile">
-                        <img src="image/Matheus.jpg">
-                        <div class="info">
-                            <h2 class="name">Matheus Augusto</h2>
-                            <div class="contato_icon">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </div> 
+                            
+            <div class="menu_card"> <!--card do pãoQueijo-->
+                
+                <div class="menu_image">
+                    <img src="image/paoQueijo.jpg">
+                </div>
+                    
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                    
+                <div class="menu_info">
+                    <h2>Pão de Queijo</h2>
+                    <h3>R$0,70</h3>
+
+                    <br>
+                    <br>
+
+                    <div class="input">
+                        <input type="text" name="" disabled id="qntPaoQueijo" >        
+                    </div>
+                    <div class="botao">
+                        <button onclick="adicionar('PaoQueijo')" class="menu_btn">Adicionar</button>
+                        <button onclick="remover('PaoQueijo')" class="menu_btn">Remover</button>   
+                    </div>
+                </div>
+            </div>
+                
+            <div class="menu_card"> <!--card do paoMilho-->
+                
+                <div class="menu_image">
+                    <img src="image/paoHamburguer.jpg">
+                </div>
+                    
+                <div class="small_card">
+                        <i class="fa-solid fa-heart"></i>
+                </div>
+                        
+                <div class="menu_info">
+                    <h2>Pão de Milho</h2>
+                    <h3>R$0,80</h3>
+
+                    <br>
+                    <br>
+
+                    <div class="input">
+                        <input type="text" name="" disabled id="qntPaoMilho" >        
+                    </div>
+                    <div class="botao">
+                        <button onclick="adicionar('paoMilho')" class="menu_btn">Adicionar</button>
+                        <button onclick="remover('paoMilho')" class="menu_btn">Remover</button>   
+                    </div>
+                </div>
+            </div>
+                
+            <div class="menu_card"> <!--card do boloCenoura-->
+                
+                <div class="menu_image">
+                    <img src="image/boloCenoura.jpg">
+                </div>
+                    
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                    
+                <div class="menu_info">
+                        <h2>Bolo de Cenoura</h2>
+                        <h3>R$2,00</h3>
+
+                    <br>
+                    <br>
+
+                    <div class="input">
+                        <input type="text" name="" disabled id="qntBoloCenoura" >          
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="adicionar('boloCenoura')" class="menu_btn">Adicionar</button>
+                        <button onclick="remover('boloCenoura')" class="menu_btn">Remover</button>   
+                    </div>
+                </div>
+            </div>
+                
+            <div class="menu_card"> <!--card do Donut-->
+         
+                <div class="menu_image">
+                    <img src="image/donut.jpg">
+                </div>
+                    
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                    
+                <div class="menu_info">
+                    <h2>Donuts</h2>
+                    <h3>R$5,00</h3>
+
+                    <br>
+                    <br>
+
+                    <div class="input">
+                        <input type="text" name="" disabled id="qntDonuts" >        
+                    </div>
+                    <div class="botao">
+                        <button onclick="adicionar('donuts')" class="menu_btn">Adicionar</button>
+                        <button onclick="remover('donuts')" class="menu_btn">Remover</button>   
+                    </div>
+                </div>
+            </div>
+                
+            <div class="menu_card"> <!--card do roscaCoco-->            
+                <div class="menu_image">
+                    <img src="image/roscaCoco.jpg">
+                </div>
+                    
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                    
+                <div class="menu_info">
+                    <h2>Rosquinha de Coco</h2>
+                    <h3>R$13,00</h3>
+                    <br>
+                    <br>
+                    <div class="input">
+                        <input type="text" name="" disabled id="qntRosquinhaCoco" >        
+                    </div>
+                    <div class="botao">
+                        <button onclick="adicionar('rosquinhaCoco')" class="menu_btn">Adicionar</button>
+                        <button onclick="remover('rosquinhaCoco')" class="menu_btn">Remover</button>   
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div><!-- div menu2 termina aqui -->
+    </div><!-- div menu_box termina aqui -->
+</div><!-- div menu termina aqui -->
+
+
+      <!--Contato-->
+<div class="contato" id="Contato">
+    <h1><span>Contato</span></h1>
+    <div class="contato_box">
+        <div class="profile">
+            <img src="image/Matheus.jpg">
+                <div class="info">
+                    <h2 class="name">Matheus Augusto</h2>
+                    <div class="contato_icon">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </div><!-- div contato termina aqui -->
 
 
@@ -259,108 +274,111 @@
 
 
 <div id="displayCarrinho" style="display: none;">  
-<div class="carrinhoBack"> 
-<div class="logoCarrinho">  
-      
-<button onclick="confirmarLimpar()">
-<img src="image/carrinho-icon.png" alt="">
-</button>
-</div> 
+    <div class="carrinhoBack"> 
 
-            <div class="produtosVenda">
-                <div class="carrinhosElementos">
-                <div class="elementos1" id="paoElemento" style="display: inherit;">
+        <div class="logoCarrinho">  
+            <button onclick="confirmarLimpar()">
+            <img src="image/carrinho-icon.png" alt="">
+            </button>
+        </div> 
+
+        <div class="produtosVenda">
+            <div class="carrinhosElementos">
+
+            <div class="elementos1" id="paoElemento" style="display: inherit;">
                 <img src="./image/pão.jpg" alt="">
-                 <input disabled id="quantidadePao2" type="text" >
-                                        <div class="elementosBotao">
-                        <button onclick="carrinhoRemover('Pao')"><i class="fa-solid fa-trash"></i></button>                
-                        <button onclick="adicionar('Pao')"><i class="fa-solid fa-plus"></i></button>
-                        <button onclick="remover('Pao')"><i class="fa-solid fa-minus"></i></button>
-                    </div>
-                    </div>
+                <input disabled id="quantidadePao2" type="text" >
 
+                <div class="elementosBotao">
+                    <button onclick="carrinhoRemover('Pao')"><i class="fa-solid fa-trash"></i></button>                
+                    <button onclick="adicionar('Pao')"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="remover('Pao')"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </div>
 
-
-                <div class="elementos1" id="paoQueijoElemento" style="display: inherit;">
+            <div class="elementos1" id="paoQueijoElemento" style="display: inherit;">
                 <img src="./image/paoQueijo.jpg" alt="">
                 <input disabled id="qntPaoQueijo2" type="text" >
-                                <div class="elementosBotao">
+
+                <div class="elementosBotao">
                     <button onclick="carrinhoRemover('PaoQueijo')"><i class="fa-solid fa-trash"></i></button>                  
                     <button onclick="adicionar('PaoQueijo')"><i class="fa-solid fa-plus"></i></button>
                     <button onclick="remover('PaoQueijo')"><i class="fa-solid fa-minus"></i></button>
                 </div>
-                </div>
-        
-
-
-
-                <div class="elementos1" id="paoMilhoElemento" style="display: inherit;">
+            </div>
+                    
+            <div class="elementos1" id="paoMilhoElemento" style="display: inherit;">
                 <img src="./image/paoHamburguer.jpg" alt="">
-                <input disabled id="qntPaoMilho2" type="text" >
-                                <div class="elementosBotao">
+                <input disabled id="qntPaoMilho2" type="text">
+
+                <div class="elementosBotao">
                     <button onclick="carrinhoRemover('paoMilho')"><i class="fa-solid fa-trash"></i></button>                 
                     <button onclick="adicionar('paoMilho')"><i class="fa-solid fa-plus"></i></button>
                     <button onclick="remover('paoMilho')"><i class="fa-solid fa-minus"></i></button>
                 </div>
-                </div>
-
-                <div class="elementos1" id="boloCenouraElemento" style="display: inherit;">
+            </div>
+                
+            <div class="elementos1" id="boloCenouraElemento" style="display: inherit;">
                 <img src="./image/boloCenoura.jpg" alt="">
-                <input disabled id="qntBoloCenoura2" type="text" >
+                <input disabled id="qntBoloCenoura2" type="text">
+
                 <div class="elementosBotao">
                     <button onclick="carrinhoRemover('boloCenoura')"><i class="fa-solid fa-trash"></i></button>        
                     <button onclick="adicionar('boloCenoura')"><i class="fa-solid fa-plus"></i></button>
                     <button onclick="remover('boloCenoura')"><i class="fa-solid fa-minus"></i></button>
                 </div>
-                </div>
+            </div>
 
-                <div class="elementos1" id="donutElemento" style="display: inherit;">
+            <div class="elementos1" id="donutElemento" style="display: inherit;">
                 <img src="./image/donut.jpg" alt="">
                 <input disabled id="qntDonuts2" type="text" >
-                                <div class="elementosBotao">
+                
+                <div class="elementosBotao">
                     <button onclick="carrinhoRemover('donuts')"><i class="fa-solid fa-trash"></i></button>
                     <button onclick="adicionar('donuts')"><i class="fa-solid fa-plus"></i></button>
                     <button onclick="remover('donuts')"><i class="fa-solid fa-minus"></i></button>
                 </div>
-                </div>
+            </div>
 
-                <div class="elementos1" id="rosquinhaCocoElemento" style="display: inherit;">
+            <div class="elementos1" id="rosquinhaCocoElemento" style="display: inherit;">
                 <img src="./image/roscaCoco.jpg" alt="">
                 <input disabled id="qntRosquinhaCoco2" type="text" >
-                                <div class="elementosBotao">
+
+                <div class="elementosBotao">
                     <button onclick="carrinhoRemover('rosquinhaCoco')"><i class="fa-solid fa-trash"></i></button>
                     <button onclick="adicionar('rosquinhaCoco')"><i class="fa-solid fa-plus"></i></button>
                     <button onclick="remover('rosquinhaCoco')"><i class="fa-solid fa-minus"></i></button>
                 </div>
-                </div>
+            </div>
 
-                </div>   
-                </div>
-                
-    
-</div> 
+
+
+            </div>   
+        </div>  
+    </div> 
 </div>
 
 
+
 <div id="limpei" style="display: none;">
-<div class="a1">
-    <div class="a2">    
+    <div class="a1">
+        <div class="a2">    
             <h1>Deseja limpar o carrinho?</h1>
+            
             <div class="a3">
                 <button onclick="limparCarrinho()" class="Y">Sim</button>
                 <button onclick="voltar2()" class="N">Não</button>
             </div>
+        </div>
     </div>
 </div>
-</div>
-
-<!--Footer termina-->
 
 
-    <script src="script.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=REM:wght@300&display=swap');
-        </style>
+
+<script src="script.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=REM:wght@300&display=swap');
+</style>
         
 </body>
 </html>
