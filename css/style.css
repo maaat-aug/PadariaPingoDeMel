@@ -17,7 +17,7 @@ section{
 }
 input:disabled {
 
-    background-color: transparent;
+    background-color: white;
 }
 section nav{
     display: flex;
