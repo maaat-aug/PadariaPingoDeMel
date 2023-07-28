@@ -8,7 +8,7 @@ section .main .men_text h1 span{
 }
 input:disabled {
 
-    background-color: transparent;
+    background-color: white;
 }
 section .main .men_text h1{
     font-size: 30px;
