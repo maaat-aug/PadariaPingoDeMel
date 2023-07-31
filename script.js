@@ -1,16 +1,6 @@
-       /* OBS: 
-Para adicionar um novo item:
-- o valor irá na "function preço()"
-- o id que foi colocado nos inputs, terá que ser atualizado na "function attQuantidade()"
-- e terá que ser adicionado um let com o id que foi colocado nos inputs, seguindo o modelo abaixo:
-       */
-
-// Smooth Scrolling
-// Smooth Scrolling
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 let valorTotal = document.getElementById("valorTotal");
 let valorTotal2 = document.getElementById("valorTotalCarrinho");
-
 
 // Produtos 
 let quantidadePao = document.getElementById("quantidadePao");
@@ -28,6 +18,14 @@ let qntBoloCenoura2 = document.getElementById("qntBoloCenoura2");
 let qntDonuts2 = document.getElementById("qntDonuts2");
 let qntPaoMilho2 = document.getElementById("qntPaoMilho2");
 let qntRosquinhaCoco2 = document.getElementById("qntRosquinhaCoco2");
+
+// Display e Icons
+let displayCompras = document.getElementById("displayCompras");
+let displayCarrinho = document.getElementById("displayCarrinho");
+let seta = document.getElementById("seta")
+let carrinhoIcon = document.getElementById("carrinho")
+let limparCarrinho = document.getElementById("limparCarrinho"); 
+let information = document.getElementById("information")
 
 function adicionar(item) { // Adiciona Itens ao carrinho (que está em forma de array)
     carrinho.push(item);
@@ -75,7 +73,6 @@ function attQuantidade() { // pega os numeros do contarItems e os coloca nos inp
     qntRosquinhaCoco2.value = contarItems("rosquinhaCoco");
 }
 
-
 function salvarCarrinhoNoLocalStorage() { // está salvando o array carrinho no local storage
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
@@ -101,64 +98,61 @@ function preço() { // Aqui é salvo o preço dos produtos
     valorTotal2.textContent = " Valor Total: R$" + valor.toFixed(2).replace(".", ","); // imprimindo o valor total
 }
 
-function trocarDisplay() { // Botão continuar
-
-    let displayCompras = document.getElementById("displayCompras");
-    let displayCarrinho = document.getElementById("displayCarrinho");
-    let seta = document.getElementById("seta")
-    let carrinho = document.getElementById("carrinho")
-    let information1 = document.getElementById("information1")
-
-    information1.style.display = "none"
+function trocarDisplay() { // Vai para o carrinho
+    information.style.display = "none"
     displayCarrinho.style.display = "inline"
     displayCompras.style.display = "none";
     seta.style.display = "inline";
-    carrinho.style.display = "none";
+    carrinhoIcon.style.display = "none";
+    limparCarrinho.style.display = "none";
     carrinhoVerificar();
-    preçoUnidade();
-    
+    preçoUnidade();   
 }
 
-function displayVoltar() { // Botão voltar
-    let displayCompras = document.getElementById("displayCompras");
-    let displayCarrinho = document.getElementById("displayCarrinho");
-    let seta = document.getElementById("seta")
-    let carrinho = document.getElementById("carrinho")
-    let limpei = document.getElementById("limpei"); 
-    let information1 = document.getElementById("information1")
-
-    information1.style.display = "none"
-    limpei.style.display = "none";
+function displayVoltar() { // Volta para o menu principal
+    information.style.display = "none"
+    limparCarrinho.style.display = "none";
     displayCarrinho.style.display = "none"
     displayCompras.style.display = "inline";
     seta.style.display = "none";
-    carrinho.style.display = "inline";
+    carrinhoIcon.style.display = "inline";
     carrinhoVerificar();
     preçoUnidade();
 }
 
-function information1() {
-    let displayCompras = document.getElementById("displayCompras");
-    let displayCarrinho = document.getElementById("displayCarrinho");
-    let limpei = document.getElementById("limpei"); 
-    let information1 = document.getElementById("information1")
-
-    limpei.style.display = "none";
+function informationMostrar() {// Display de informação no menu principal
+    limparCarrinho.style.display = "none";
     displayCarrinho.style.display = "none"
-    information1.style.display = "Inherit"
+    information.style.display = "Inherit"
     displayCompras.style.display = "none";
 }
-function carrinhoRemover(tipo) {
+
+function confirmarLimpar() { // Mostra o display de limpar o carrinho
+    limparCarrinho.style.display = "inline";
+    displayCarrinho.style.display = "none";
+}
+    
+function limparCarrinhoDisplay() { // limpar totalmente o carrinho, e depois vai voltar para o display do carrinho
+        carrinho = [];
+        limparCarrinho.style.display = "none";
+        displayCarrinho.style.display = "inherit";
+        preçoUnidade();
+        preço();
+        salvarCarrinhoNoLocalStorage();
+        attQuantidade();
+        carrinhoVerificar();
+}
+
+function carrinhoRemover(tipo) { // Remove todos os tipos de um item do carrinho
     carrinho = carrinho.filter(item => item !== tipo); // Filtra o array para manter apenas os itens que não são do tipo especificado
     salvarCarrinhoNoLocalStorage(); // Salva o carrinho atualizado no Local Storage
     attQuantidade(); // Atualiza a lista de itens do carrinho no HTML
     carrinhoVerificar();
     preço();
     preçoUnidade();
-
 }
 
-function carrinhoVerificar() {
+function carrinhoVerificar() { // Verifica se tem pelo menos um item para que ele possa ser exibido no carrinho
 let paoElemento = document.getElementById("paoElemento")
 
     if (quantidadePao.value <= 0) {
@@ -196,49 +190,9 @@ let paoElemento = document.getElementById("paoElemento")
     } else {
         paoMilhoElemento.style.display = "inherit"
     }
-
-
-
-
-
-
 }
 
-function confirmarLimpar() {
-
-    let limpei = document.getElementById("limpei");
-    let displayCarrinho = document.getElementById("displayCarrinho");
-
-limpei.style.display = "inline";
-displayCarrinho.style.display = "none";
-
-}
-
-
-function voltar2() {
-let limpei = document.getElementById("limpei");
-let displayCarrinho = document.getElementById("displayCarrinho");
-
-limpei.style.display = "none";
-displayCarrinho.style.display = "inline";
-}
-
-function limparCarrinho() {
-    carrinho = [];
-    let limpei = document.getElementById("limpei");
-    let displayCarrinho = document.getElementById("displayCarrinho");
-    
-    limpei.style.display = "none";
-    displayCarrinho.style.display = "inherit";
-    preçoUnidade();
-    preço();
-    salvarCarrinhoNoLocalStorage();
-    attQuantidade();
-    carrinhoVerificar();
-}
-
-
-function preçoUnidade() {
+function preçoUnidade() { // Calcula o preço total de cada tipo de item e exibe no carrinho
     let precoPaoInput = document.getElementById("precoPao");
     let precoPaoQueijoInput = document.getElementById("precoPaoQueijo");
     let precoPaoMilhoInput = document.getElementById("precoPaoMilho")
@@ -259,4 +213,4 @@ function preçoUnidade() {
 attQuantidade(); // atualizando a quantidade de itens no input ao carregar a pagina
 preço();  // atualizando o preço total ao carregar a pagina
 preçoUnidade();  // atualizando o preço total ao carregar a pagina
-carrinhoVerificar()
+carrinhoVerificar() // verifica se tem pelo menos um tipo de item para poder exibi-lo no carrinho

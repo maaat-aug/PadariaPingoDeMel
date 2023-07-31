@@ -12,21 +12,21 @@
 </head>
 <body>
 
-<section style="height: 0vh;"><!-- NavBar aqui-->
+<section style="height: 0vh;"><!-- NavBar -->
     <nav>
-        <div class="logo" >
+        <div class="logo" > <!-- imagem da logo -->
             <a href="#Home" onclick="displayVoltar()">
             <img src="image/logo1.png">  
             </a>
         </div>
 
-        <ul>
+        <ul> <!-- botões da nav (menu, home, contato, etc)-->
             <li><a onclick="displayVoltar()" href="#Home">Home</a></li>
             <li><a onclick="displayVoltar()" href="#Menu">Menu</a></li>
             <li><a onclick="displayVoltar()" href="#Contato">Contato</a></li>
         </ul>
 
-        <div class="icon">
+        <div class="icon"> <!-- Icon do carrinho e valor total-->
             <i 
             id="carrinho"
             onclick="trocarDisplay()" 
@@ -52,7 +52,7 @@
 <div id="displayCompras" style="display: inline;">  <!-- Pagina principal inteira dentro dessa div-->
     <section id="Home">
         <div class="main">
-            <div class="textos">
+            <div class="textos"> <!-- textos do menu principal -->
 
                 <div class="men_text">
                     <h1><span>O Pão quentinho</span><br>para as suas manhãs</h1>
@@ -68,7 +68,7 @@
                         <a href="#Menu">Nossos produtos</a>
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
-                    <button onclick="information1()">
+                    <button onclick="informationMostrar()">
                         <i id="informationButton" class="fa-regular fa-circle-question"></i>
                     </button>
                 </div> 
@@ -79,7 +79,7 @@
 
 
 <!--Menu-->
-<div class="menu" id="Menu">
+<div class="menu" id="Menu"> <!-- Menu -->
 
     <h1><span>Menu</span></h1>  
 
@@ -244,24 +244,22 @@
                     </div>
                 </div>
             </div>
-            
-            
+                
         </div><!-- div menu2 termina aqui -->
     </div><!-- div menu_box termina aqui -->
 </div><!-- div menu termina aqui -->
 
 
-      <!--Contato-->
-<div class="contato" id="Contato">
+<div class="contato" id="Contato">  <!--Contato-->
     <h1><span>Contato</span></h1>
     <div class="contato_box">
         <div class="profile">
-            <img src="image/Matheus.jpg">
+            <img src="image/Matheus.jpg"> <!-- imagem do contato -->
                 <div class="info">
                     <h2 class="name">Matheus Augusto</h2>
                     <div class="contato_icon">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-github"></i> <!-- icon dos inta e github -->
+                    <i class="fa-brands fa-instagram"></i> 
                 </div>
             </div>
         </div>
@@ -271,152 +269,155 @@
 
 
 
-</div> 
+</div>  <!-- fim da div displayCompras -->
 
 
 
-<div id="displayCarrinho" style="display: none;">  
+<div id="displayCarrinho"  style="display: none;">   <!-- display do Carrinho-->
     <div class="carrinhoBack"> 
 
-        <div class="logoCarrinho">
+        <div class="logoCarrinho"> <!-- logo do carrinho -->
             <button onclick="confirmarLimpar()">
             <img src="image/carrinho-icon.png" alt="">
             </button>
-            <div class="botaoInformationCarrinho">
-            </div>
-
         </div>
-        <div class="produtosVenda">
-            <div class="carrinhosElementos">
-            <div class="elementos1" id="paoElemento" style="display: inherit;">
-                <div class="Unidade">
-                <img src="./image/pão.jpg" alt="">
-                <input disabled type="text" name="" id="precoPao">
-                </div>
-                    <input disabled id="quantidadePao2" type="text" >
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('Pao')"><i class="fa-solid fa-trash"></i></button>                
-                    <button onclick="adicionar('Pao')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('Pao')"><i class="fa-solid fa-minus"></i></button>
-                </div>
-            </div>
 
-            <div class="elementos1" id="paoQueijoElemento" style="display: inherit;">
-                <div class="Unidade">
-                    <img src="./image/paoQueijo.jpg" alt="">
-                    <input disabled type="text" name="" id="precoPaoQueijo">
+        <div class="produtosVenda"> <!-- produtos do carrinho -->
+
+            <div class="carrinhosElementos"> <!-- começo dos itens no carrinho-->
+
+                <div class="elementos1" id="paoElemento" style="display: inherit;"> <!-- paoCarrinho-->
+                    <div class="Unidade">
+                    <img src="./image/pão.jpg" alt="">
+                    <input disabled type="text" name="" id="precoPao">
                     </div>
-                <input disabled id="qntPaoQueijo2" type="text" >
-
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('PaoQueijo')"><i class="fa-solid fa-trash"></i></button>                  
-                    <button onclick="adicionar('PaoQueijo')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('PaoQueijo')"><i class="fa-solid fa-minus"></i></button>
+                        <input disabled id="quantidadePao2" type="text" >
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('Pao')"><i class="fa-solid fa-trash"></i></button>                
+                        <button onclick="adicionar('Pao')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('Pao')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
                 </div>
-            </div>
+
+                <div class="elementos1" id="paoQueijoElemento" style="display: inherit;"> <!-- paoQueijoCarrinho-->
+                    <div class="Unidade">
+                        <img src="./image/paoQueijo.jpg" alt="">
+                        <input disabled type="text" name="" id="precoPaoQueijo">
+                        </div>
+                    <input disabled id="qntPaoQueijo2" type="text" >
+
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('PaoQueijo')"><i class="fa-solid fa-trash"></i></button>                  
+                        <button onclick="adicionar('PaoQueijo')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('PaoQueijo')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+                        
+                <div class="elementos1" id="paoMilhoElemento" style="display: inherit;"> <!-- paoMilhoCarrinho-->
+                    <div class="Unidade">
+                        <img src="./image/paoHamburguer.jpg" alt="">
+                        <input disabled type="text" name="" id="precoPaoMilho">
+                    </div>
+                    <input disabled id="qntPaoMilho2" type="text">
+
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('paoMilho')"><i class="fa-solid fa-trash"></i></button>                 
+                        <button onclick="adicionar('paoMilho')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('paoMilho')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
                     
-            <div class="elementos1" id="paoMilhoElemento" style="display: inherit;">
-                <div class="Unidade">
-                    <img src="./image/paoHamburguer.jpg" alt="">
-                    <input disabled type="text" name="" id="precoPaoMilho">
+                <div class="elementos1" id="boloCenouraElemento" style="display: inherit;"> <!-- boloCenouraCarrinho-->
+                    <div class="Unidade">
+                        <img src="./image/boloCenoura.jpg" alt="">
+                        <input disabled type="text" name="" id="precoBoloCenoura">
+                    </div>
+                    <input disabled id="qntBoloCenoura2" type="text">
+
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('boloCenoura')"><i class="fa-solid fa-trash"></i></button>        
+                        <button onclick="adicionar('boloCenoura')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('boloCenoura')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
                 </div>
-                <input disabled id="qntPaoMilho2" type="text">
 
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('paoMilho')"><i class="fa-solid fa-trash"></i></button>                 
-                    <button onclick="adicionar('paoMilho')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('paoMilho')"><i class="fa-solid fa-minus"></i></button>
+                <div class="elementos1" id="donutElemento" style="display: inherit;"> <!-- donutCarrinho-->
+
+                    <div class="Unidade">
+                        <img src="./image/donut.jpg" alt="">
+                        <input disabled type="text" name="" id="precoDonut">
+                    </div>
+                    <input disabled id="qntDonuts2" type="text" >
+                    
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('donuts')"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="adicionar('donuts')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('donuts')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
                 </div>
-            </div>
-                
-            <div class="elementos1" id="boloCenouraElemento" style="display: inherit;">
-                <div class="Unidade">
-                    <img src="./image/boloCenoura.jpg" alt="">
-                    <input disabled type="text" name="" id="precoBoloCenoura">
+
+                <div class="elementos1" id="rosquinhaCocoElemento" style="display: inherit;"> <!-- rosquinhaCocoCarrinho-->
+                    <div class="Unidade">
+                        <img src="./image/roscaCoco.jpg" alt="">
+                        <input disabled type="text" name="" id="precoRoscaCoco">
+                    </div>
+                    <input disabled id="qntRosquinhaCoco2" type="text" >
+
+                    <div class="elementosBotao">
+                        <button onclick="carrinhoRemover('rosquinhaCoco')"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="adicionar('rosquinhaCoco')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="remover('rosquinhaCoco')"><i class="fa-solid fa-minus"></i></button>
+                    </div>
                 </div>
-                <input disabled id="qntBoloCenoura2" type="text">
 
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('boloCenoura')"><i class="fa-solid fa-trash"></i></button>        
-                    <button onclick="adicionar('boloCenoura')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('boloCenoura')"><i class="fa-solid fa-minus"></i></button>
-                </div>
-            </div>
-
-            <div class="elementos1" id="donutElemento" style="display: inherit;">
-
-                <div class="Unidade">
-                    <img src="./image/donut.jpg" alt="">
-                    <input disabled type="text" name="" id="precoDonut">
-                </div>
-                <input disabled id="qntDonuts2" type="text" >
-                
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('donuts')"><i class="fa-solid fa-trash"></i></button>
-                    <button onclick="adicionar('donuts')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('donuts')"><i class="fa-solid fa-minus"></i></button>
-                </div>
-            </div>
-
-            <div class="elementos1" id="rosquinhaCocoElemento" style="display: inherit;">
-                <div class="Unidade">
-                    <img src="./image/roscaCoco.jpg" alt="">
-                    <input disabled type="text" name="" id="precoRoscaCoco">
-                </div>
-                <input disabled id="qntRosquinhaCoco2" type="text" >
-
-                <div class="elementosBotao">
-                    <button onclick="carrinhoRemover('rosquinhaCoco')"><i class="fa-solid fa-trash"></i></button>
-                    <button onclick="adicionar('rosquinhaCoco')"><i class="fa-solid fa-plus"></i></button>
-                    <button onclick="remover('rosquinhaCoco')"><i class="fa-solid fa-minus"></i></button>
-                </div>
-            </div>
-
-
-
-            </div> 
+            </div> <!-- fim da div carrinhosElementos-->
             
-                    <div class="emptyMiddleSpace">
-                    a <!-- espaço branco no meio do displayCarrinho-->
-                    </div>
+            <div class="emptyMiddleSpace">
+            <!-- espaço branco no meio do displayCarrinho-->
+            </div>
 
-        <div class="finalizarPrimario">
-                    <div class="finalizarCompra">
-                            <div class="ConfirmarCompra">
-                        <h1 id="confirmar1">Resumo:</h1>
+
+            <div class="finalizarPrimario"> <!-- display do finalizar pedido-->
+                <div class="finalizarCompra">
+                        <div class="ConfirmarCompra">
+                    <h1 id="confirmar1">Resumo:</h1>
+                        </div>
+                <div class="confirmarConteudo">
+                    <div class="valorTotalBox">
+                <p id="valorTotalCarrinho">Total Total: R$0,00</p>
+                </div>
+                </div>
+                        <div class="confirmarBottomBox">
+                            <div class="confirmarBottom">
+                                <button><i class="fa-solid fa-cart-shopping"></i> Finalizar Pedido</button>
                             </div>
-                    <div class="confirmarConteudo">
-                        <div class="valorTotalBox">
-                    <p id="valorTotalCarrinho">Total Total: R$0,00</p>
-                    </div>
-                    </div>
-                            <div class="confirmarBottomBox">
-                                <div class="confirmarBottom">
-                                    <button><i class="fa-solid fa-cart-shopping"></i> Finalizar Pedido</button>
-                                </div>
-                            </div>
-                    </div>
-                </div> <!-- aa-->                    
+                        </div>
+                </div>
+            </div> <!-- finalizar pedido end-->    
+                
+                
         </div>  
     </div> 
-</div>
+</div> <!-- fim do div displayCarrinho-->
 
 
 
-<div id="limpei" style="display: none;">
-    <div class="a1">
-        <div class="a2">    
+<div id="limparCarrinho" style="display: none;"> <!-- display de limpar o carrinho-->
+    <div class="limparCarrinho">
+        <div class="limparCarrinhoBox">
             <h1>Deseja limpar o carrinho?</h1>
             
-            <div class="a3">
-                <button onclick="limparCarrinho()" class="Y">Sim</button>
-                <button onclick="voltar2()" class="N">Não</button>
+            <div class="botaoLimpar">
+                <button onclick="limparCarrinhoDisplay()" class="Y">Sim</button>
+                <button onclick="trocarDisplay()" class="N">Não</button>
             </div>
         </div>
     </div>
-</div>
+</div> <!-- fim do div limparCarrinho -->
 
-<div id="information1" style="display: none;">
+
+
+<div id="information" style="display: none;"> <!-- display da informação do menu principal-->
 
 <div class="informa">
     <div class="informaText">
@@ -429,12 +430,9 @@
     </div>
 </div>
 
-</div>
+</div> <!-- final do display de informação -->
 
-<script src="script.js"></script>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=REM:wght@300&display=swap');
-</style>
-        
+<script src="script.js"></script> <!-- script -->
+
 </body>
 </html>

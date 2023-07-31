@@ -1,10 +1,12 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=REM:wght@300&display=swap'); 
+
+*{ /* zerando a pagina, definindo font-family para toda a pagina e retirando a scrollbar */
     font-family:'REM', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: none; /* Para navegadores Firefox */
-  -ms-overflow-style: none; /* Para navegadores Internet Explorer e Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 html{
@@ -16,12 +18,14 @@ section{
     height: 100vh;
 }
 
-input:disabled {
-
+input:disabled { /* desabilitando o cinza do background dos inputs*/
     background-color: transparent;
 }
 
-section nav{
+
+/* ---- NAV-BAR ---- */
+
+section nav{ /* definindo a navbar */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -33,14 +37,14 @@ section nav{
     z-index: 1000;
 }
 
-section nav .logo img{
+section nav .logo img{ /* tamanho da logo na nav */
     width: 150px;
     cursor: pointer;
     margin: 7px 0;
 }
 
 section nav ul{
-    list-style: none;
+    list-style: none; 
 }
 
 section nav ul li{
@@ -56,6 +60,8 @@ section nav ul li a{
     transition: 0s;
 }
 
+
+/* começa a animação dos botões da nav-bar*/
 section nav ul li a::after{
     content: '';
     width: 0;
@@ -83,75 +89,69 @@ section nav .icon i{
 section nav .icon i:hover{
     color: #fac031;
 }
+/* termina a animação dos botões da nav-bar*/
 
-section .main{
+#valorTotal { /* valor total dos produtos na nav-bar */
+    font-size: 20px;
+    color: black;
+    font-weight: 200;
+    font-family: mv boli, 'REM', sans-serif;
+    margin-top: -30px;
+}
+
+
+/* ---- NAV-BAR ---- */
+
+
+
+section .main{ /* Menu principal, com a frase e o texto principais */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     top: 6rem;
     height: 87vh;
-    background-image: url(../image/bg1.jpg);
+    background-image: url(../image/bg1.jpg); /* 1ro background definido aqui */
     background-size: cover;
     background-position: center;
 }
-#informationButton {
+
+/* Botão que exibe a informação*/
+#informationButton { 
     font-size: 30px;
     border-radius: 50%;
 }
 #informationButton:hover {
 color: #fac031;
 transition: 0.4s;
-
 }
-.botao {
+/* Botão que exibe a informação */
+
+.botao { /* maioria dos botões usam essa class */
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+ 
 
-.botao2 {
+
+/* botao ''nossos produtos'' */
+.botao2 { 
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.botao2 button {
+.botao2 button { 
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-section .main .men_text h1{
-    font-size: 60px;
-    text-align: center;
-    font-family: mv boli, 'REM', sans-serif;
-    line-height: 4rem;
-    
-}
 
-section .main .men_text h1 span{
-    margin-left: 15px;
-    color: #fac031;
-    font-family: mv boli, 'REM', sans-serif;
-    line-height: 22px;
-    font-size: 70px;
-}
-
-section p{
-    width: 50rem;
-    text-align: center;
-    left: 20px;
-    bottom: 120px;
-    line-height: 22px;
-    font-family: 'REM', sans-serif;
-    font-weight: 500;
-}
-
-
-section .main_btn{
+section .main_btn{ 
     background: #fac031;
     width: 200px;
     cursor: pointer;
@@ -173,35 +173,53 @@ section .main_btn i{
 section .main_btn:hover i{
     transform: translateX(7px);
 }
+/* botao ''nossos produtos'' */
 
 
 
+section .main .men_text h1{ /* o texto principal do menu, em preto*/
+    font-size: 60px;
+    text-align: center;
+    font-family: mv boli, 'REM', sans-serif;
+    line-height: 4rem;
+    
+}
 
+section .main .men_text h1 span{ /* o texto principal do menu, em amarelo */
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli, 'REM', sans-serif;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section p{ /* o texto menor, ainda no menu principal */
+    width: 50rem;
+    text-align: center;
+    left: 20px;
+    bottom: 120px;
+    line-height: 22px;
+    font-family: 'REM', sans-serif;
+    font-weight: 500;
+}
+
+/* !!  COMEÇA O  MENU COM OS PRODUTOS  !!*/
 .menu{
-    width: 99.5%;
+    width: 99.5%; /* Define o tamanho total da pagina*/
     padding: 70px 0;
 }
 
-.menu h1{
+.menu h1{ /* Tamanho da frase principal "Menu"*/
     font-size: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-}
-.menu h1 span{
     color: #fac031;
-    margin-left: 15px;
     font-family: mv boli, 'REM', sans-serif;
+    margin-left: 15px;
 }
 
-#valorTotal {
-    font-size: 20px;
-    color: black;
-    font-weight: 200;
-    font-family: mv boli, 'REM', sans-serif;
-    margin-top: -30px;
-}
 .menu h1 span::after{
     content: '';
     width: 100%;
@@ -211,7 +229,7 @@ section .main_btn:hover i{
     position: relative;
     bottom: 15px;
 }
-.menu2 {
+.menu2 { 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -224,7 +242,7 @@ section .main_btn:hover i{
     
 
 }
-.menu .menu_box .menu_card{
+.menu .menu_box .menu_card{ /* começa as card de produto*/
     width: 325px;
     height: 480px;
     padding-top: 10px;
@@ -232,14 +250,14 @@ section .main_btn:hover i{
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.menu .menu_box .menu_card .menu_image{
+.menu .menu_box .menu_card .menu_image{ /*imagem dos produtos dentro das card*/
     width: 300px;
     height: 245px;
     margin: auto;
     overflow: hidden;
 }
 
-.menu .menu_box .menu_card .menu_image img{
+.menu .menu_box .menu_card .menu_image img{  /*imagem dos produtos dentro das card*/
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -247,11 +265,11 @@ section .main_btn:hover i{
     transition: 0.7s;
 }
 
-.menu .menu_box .menu_card .menu_image:hover img{
+.menu .menu_box .menu_card .menu_image:hover img{ /* imagem se aproximando */
     transform: scale(1.15);
 }
 
-.menu .menu_box .menu_card .small_card{
+.menu .menu_box .menu_card .small_card{ /* coração que aparece com a animação*/
     width: 45px;
     height: 45px;
     float: right;
@@ -263,14 +281,16 @@ section .main_btn:hover i{
     transition: 0.3s;
 }
 
-.menu .menu_box .menu_card:hover .small_card{
+.menu .menu_box .menu_card:hover .small_card{ /* coração que aparece com a animação*/
+    width: 45px;
     position: relative;
     top: -240px;
     right: 20px;
     opacity: 1;
 }
 
-.menu .menu_box .menu_card .small_card i{
+.menu .menu_box .menu_card .small_card i{ /* coração que aparece com a animação*/
+    width: 45px;
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -283,11 +303,12 @@ section .main_btn:hover i{
 
 }
 
-.menu .menu_box .menu_card .small_card i:hover{
+.menu .menu_box .menu_card .small_card i:hover{ /* coração que aparece com a animação*/
+    width: 45px;
     color: #fac031;
 }
 
-.menu .menu_box .menu_card .menu_info h2{
+.menu .menu_box .menu_card .menu_info h2{ /* titulo/nome dos produtos */
     width: 75%;
     text-align: center;
     margin: 20px auto 5px auto;
@@ -295,27 +316,14 @@ section .main_btn:hover i{
     color: #fac031;
 }
 
-.menu .menu_box .menu_card .menu_info p{
-    text-align: center;
-    margin-top: 8px;
-    line-height: 21px;
 
-
-}
-
-.menu .menu_box .menu_card .menu_info h3{
+.menu .menu_box .menu_card .menu_info h3{ /*o preço dos produtos*/
     font-weight: 600;
     text-align: center;
     margin-top: 10px;
 }
 
-.menu .menu_box .menu_card .menu_info .menu_icon{
-    color: #fac031;
-    text-align: center;
-    margin: 10px 0 10px 0;
-}
-
-.menu .menu_box .menu_card .menu_info .menu_btn{
+.menu .menu_box .menu_card .menu_info .menu_btn{ /* botão add/remover das card*/
     display: inline;
     cursor: pointer; 
     align-items: center;
@@ -329,11 +337,11 @@ section .main_btn:hover i{
     border: none;
     margin-top: -1rem;
 }
-.menu_btn:hover {
+.menu_btn:hover { /* botão add/remover das card*/
     color: white  !important;
     background-color: black !important;
 }
-.menu input {
+.menu input { /* o input text que mostra a quantidade de itens dentro das cards*/
     border: none !important;
     width: 4rem;
     font-size: 18px;
@@ -341,15 +349,16 @@ section .main_btn:hover i{
     margin-top: -3.5rem;
 }
 
-
-
-.menu .input {
+.menu .input { /* o input text que mostra a quantidade de itens dentro das cards*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* ---- ACABA O MENU -----*/
 
-.contato{
+
+/* ---- COMEÇA O CONTATO*/
+.contato{ /* define o tamanho da pagina dos contatos e coloca o background*/
     width: 100%;
     height: 85vh;
     background-image: url(../image/bg1.jpg);
@@ -357,32 +366,19 @@ section .main_btn:hover i{
     background-position: center;
 }
 
-.contato h1{
+.contato h1{ /*O nome da pessoa que estiver nos contato*/
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 55px;
     margin-bottom: 10px;
-}
-
-.contato h1 span{
     color: #fac031;
     margin-left: 15px;
     font-family: mv boli, 'REM', sans-serif;
 }
 
-.contato h1 span::after{
-    content: '';
+.contato .contato_box{ /* box de contato quadrada*/
     width: 100%;
-    height: 2px;
-    background: #fac031;
-    display: block;
-    position: relative;
-    bottom: 15px;
-}
-
-.contato .contato_box{
-    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -391,7 +387,7 @@ section .main_btn:hover i{
     top: 13%;
 }
 
-.contato .contato_box .profile{
+.contato .contato_box .profile{ /* box de contato redonda*/
     width: 320px;
     height: 320px;
     border-radius: 50%;
@@ -404,6 +400,7 @@ section .main_btn:hover i{
     transition: 0.4s;
 }
 
+/* COMEÇA A ANIMAÇÃO DOS CONTATO*/
 .contato .contato_box .profile:hover{
     border-radius: 20px;
     height: 320px;
@@ -452,10 +449,14 @@ section .main_btn:hover i{
     color: #fac031;
 }
 
+/* TERMINA A ANIMAÇÃO DOS CONTATO*/
 
+
+
+/* COMEÇA A DIV CARRINHODISPLAY*/
 .carrinhoBack {
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
     background-image: url(../image/bg2.jpg);
     background-size: cover;
     background-position: center;
@@ -463,13 +464,14 @@ section .main_btn:hover i{
 }
 
 
+/*Imagem grande do carrinho */
 .logoCarrinho img {
     width: 100px !important;
     height: 100px !important;
     margin-top: 7rem;
 }
-
-.logoCarrinho {
+ 
+.logoCarrinho { 
     display: flex !important;
     width: 100%;
     height: 150px;
@@ -479,7 +481,7 @@ section .main_btn:hover i{
     align-items: center;
 
 }
-.logoCarrinho button {
+.logoCarrinho button { 
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -490,35 +492,30 @@ section .main_btn:hover i{
     transition: 0.3s linear;
     margin-top: 1rem;
 }
+/*Imagem grande do carrinho */
+
 
 .produtosVenda {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .carrinhosElementos {
     width: 33%;
-    height: 100%;
+    height: 500%;
     display: flex;
     flex-direction: column;
     margin-top: 20rem;
 }
 
-
-.botaoInformationCarrinho {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-.carrinhosElementos img {
+.carrinhosElementos img { /* Imagem que fica dentro dos produtos no carrinho */
     width: 130px;
     height: 130px;
     border-radius: 35px;
 }
 
-.carrinhosElementos input {
+.carrinhosElementos input { /* Input que fica dentro dos produtos no carrinho */
     display: flex;
     margin-left: 20px;
     width: 20px;
@@ -530,31 +527,16 @@ section .main_btn:hover i{
     border: none;
 }
 
-.elementos1 {
+.elementos1 { /* são os produtos dentro do carrinho */
     padding: 30px;
     border-radius: 35px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     display: flex;
     background-color: white;
     margin-bottom: 20px;
-    align-items: center;
-    position:static;
+    align-items: center; 
 }
 
-.elementos2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -31px;
-}
-
-.elementos2 button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 30px;
-
-}
 .Unidade input{
     display: flex;
     width: 130px;
@@ -588,12 +570,15 @@ border-radius: 50%;
     width: 70%;
 }
 
+
+/* ---- FINALIZAR COMPRA ---- */
 .finalizarPrimario {
-    margin-top: 7.9rem;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .finalizarCompra {
     justify-content: center;
@@ -602,12 +587,12 @@ border-radius: 50%;
     border-radius: 20px;
     background-color: white;
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .ConfirmarCompra {
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -654,9 +639,13 @@ border-radius: 50%;
 .valorTotalBox {
     background-color: white;
     height: 20%;
-    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
+
+/* ---- FINALIZAR COMPRA ---- */
+
 /* espaço do meio que está fazendo na div displayCarrinho */
 .emptyMiddleSpace { 
     justify-content: right;
@@ -664,26 +653,17 @@ border-radius: 50%;
     height: 100vh;
     width: 34%;
     }
-/*Footer*/
 
-footer{
-    margin-top: 15px;
-    width: 100%;
-    background: transparent;
-    height: 3rem;
-}
-
-.footer_tag{
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-}
+/* ---- FIM DO CARRINHO ---- */
 
 
 
-.a1 {
+
+
+
+/* ---- LIMPAR CARRINHO DISPLAY ---- */
+
+.limparCarrinho {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -691,24 +671,24 @@ footer{
     justify-content: center;
 }
 
-.a2  {
+.limparCarrinhoBox  {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     width: 40%;
     display: block;
      text-align: center;
 }
-.a2 h1 {
+.limparCarrinhoBox h1 {
     font-family: mv boli, 'REM', sans-serif !important;
  margin-top: 20px;
 }
-.a3 {
+.botaoLimpar {
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
-.a3 button {
+.botaoLimpar button {
     width: 10rem !important;
     height: 1.7rem;
     font-size: 18px;
@@ -716,25 +696,30 @@ footer{
     font-family: mv boli, 'REM', sans-serif !important;
 }
 
-.a3 .Y {
+.botaoLimpar .Y {
     background-color: cyan;
     border-radius: 35px;
 }
-.a3 .Y:hover {
+.botaoLimpar .Y:hover {
     background-color: rgb(115, 196, 196);
 }
-.a3 .N {
+.botaoLimpar .N {
     background-color: rgb(254, 119, 119);
     border-radius: 35px;
 }
 
-.a3 .N:hover {
+.botaoLimpar .N:hover {
     background-color: rgb(250, 45, 45);
 }
-body::-webkit-scrollbar {
-    display: none;}
 
-.informa {
+
+/* ---- FIM DO LIMPAR CARRINHO DISPLAY ---- */
+
+
+
+/* ---- BOTÃO INFORMAÇÃO DO MENU PRINCIPAL ---- */
+
+.informa { /* define tamanho, background, etc*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -745,7 +730,7 @@ body::-webkit-scrollbar {
     background-position: center;
 }
 
-.informaText {
+.informaText { /* texto da box dentro do Display Informação*/
     background-color: white;
     display: flex;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -758,17 +743,17 @@ body::-webkit-scrollbar {
     font-size: 20px;
     text-align: center;
 }
-.informaText p {
+.informaText p { /* texto da box dentro do Display Informação*/
     width: 60%;
     text-align: center;
     font-family: mv boli ;
 }
-.botaoInforma2 {
+.botaoInforma2 { /* "?" que fica no topo da box da informação */
     color: #fac031;
     font-size: 30px;
     margin-bottom: 20px;
 }
-.informatext2 {
+.informatext2 { /* botão close */
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -777,7 +762,7 @@ body::-webkit-scrollbar {
   
 }
 
-.informatext2 button {
+.informatext2 button { /* botão close */
     cursor: pointer;
     margin-top: 1.5rem;
     width: 50px;
@@ -793,3 +778,4 @@ body::-webkit-scrollbar {
     color: crimson;
     transform: 0.5s;
 }
+

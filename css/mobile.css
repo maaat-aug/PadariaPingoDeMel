@@ -60,18 +60,18 @@ section nav .icon i{
     gap: 30px;
     width: 100%;
 }
-.menu {
+.menu { /* Background do menu*/
     background-image: url(../image/bg2.jpg);
     background-size: cover;
     background-position: center;
 }
-.menu .menu_box .menu_card{
+.menu .menu_box .menu_card{ /* começa as card de produto*/
     padding-top: 30px;
     margin-bottom: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
 
-.menu .menu_box .menu_card .menu_image{
+.menu .menu_box .menu_card .menu_image{ /*imagem dos produtos dentro das card*/
     margin: auto;
     overflow: hidden;
 }
@@ -162,7 +162,7 @@ section nav .icon i{
 
 .carrinhosElementos {
     width: 100%;
-    height: 100%;
+    height: 500%;
     margin-top: 20rem;
 }
 
@@ -175,7 +175,7 @@ section nav .icon i{
     margin-right: 0px;
 }
 
-.a1 {
+.limparCarrinho {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     display: flex;
     height: 100vh;
@@ -184,7 +184,7 @@ section nav .icon i{
     justify-content: center;
 }
 
-.a2  {
+.limparCarrinhoBox {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     border: 1px solid black;
     height: 38%;
@@ -266,7 +266,7 @@ section nav .icon i{
 
 }
 .finalizarCompra {
-    margin-top: 10rem;
+    margin-top: 5rem;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
